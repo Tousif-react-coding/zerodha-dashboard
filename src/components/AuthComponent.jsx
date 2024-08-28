@@ -14,7 +14,7 @@ const [isAuth, setIsAuth] = useState(false);
         // set configurations for the API call here
         const configuration = {
           method: "get",
-          url: "http://localhost:3000/dashboard",
+          url: "https://zerodha-backend-t5mh.onrender.com/dashboard",
           headers: {
             Authorization: `Bearer ${token}`,
           },
