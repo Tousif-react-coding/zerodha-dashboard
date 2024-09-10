@@ -8,7 +8,7 @@ function AuthComponent() {
     
 const [message, setMessage] = useState("");
 const [errMsg, setErrMsg] = useState("");
-const [isAuth, setIsAuth] = useState(false);
+
 
     useEffect(() => {
         // set configurations for the API call here
@@ -31,7 +31,7 @@ const [isAuth, setIsAuth] = useState(false);
            
             setErrMsg(error.message);
             setErrMsg("You are not Authorized to this page, Please go back to login first!");
-            setIsAuth(false)
+           
 
           });
       }, []);
@@ -40,9 +40,8 @@ const [isAuth, setIsAuth] = useState(false);
        <>
      
 
-      {
-        isAuth ? <Home/> :  <h3 className="text-center  text-danger" style={{display:'flex', alignItems:'center', justifyContent:'center',height:'100vh'}}>{errMsg}</h3>
-      }
+    <Home/> 
+     
 
 </>
   );
